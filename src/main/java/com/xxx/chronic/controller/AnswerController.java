@@ -26,28 +26,30 @@ public class AnswerController {
     private AnswerService answerService;
 
     /**
-     * 查询所有问题
+     * 查询所有答案
      *
      * @return
      */
-    @GetMapping("/")
+    @GetMapping("/all")
     public Map<String, Object> allAnswer() {
         HashMap<String, Object> result = new HashMap<>();
         result.put("data", answerService.list());
         result.put("msg", "success");
+        result.put("code", 10001);
         return result;
     }
 
     /**
-     * 保存问题
+     * 保存答案
      * @param answer
      * @return
      */
-    @PostMapping("/")
+    @PostMapping("/save")
     public Map<String, Object> saveAnswer(@RequestBody Answer answer) {
         HashMap<String, Object> result = new HashMap<>();
         answerService.save(answer);
         result.put("msg", "success");
+        result.put("code", 10001);
         return result;
     }
 

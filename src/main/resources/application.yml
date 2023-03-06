@@ -1,5 +1,5 @@
 server:
-  port: 8081
+  port: 9999
   servlet:
     context-path: /chronic
 spring:
@@ -16,6 +16,7 @@ mybatis-plus:
   configuration:
     map-underscore-to-camel-case: true
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    use-generated-keys: true
   type-aliases-package: com.xxx.chronic.pojo
 
 

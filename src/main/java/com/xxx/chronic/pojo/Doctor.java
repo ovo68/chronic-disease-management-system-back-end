@@ -16,7 +16,7 @@ public class Doctor {
     /**
      * id
      */
-    @TableId(value = "id", type = IdType.INPUT)
+    @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
 
     /**
@@ -30,4 +30,19 @@ public class Doctor {
      */
     @TableField(value = "phone")
     private String phone;
+
+
+    /**
+     * 密码
+     */
+    @TableField(value = "password")
+    private String password;
+
+
+    /**
+     * 病人：0；医生：1
+     */
+    @TableField(value = "`role`")
+    private Integer role;
+
 }

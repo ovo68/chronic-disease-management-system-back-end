@@ -16,7 +16,7 @@ public class Sick {
     /**
      * 主键
      */
-    @TableId(value = "id", type = IdType.INPUT)
+    @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
 
     /**

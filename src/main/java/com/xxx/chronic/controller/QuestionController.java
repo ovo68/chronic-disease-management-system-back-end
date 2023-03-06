@@ -25,28 +25,30 @@ public class QuestionController {
     private QuestionService questionService;
 
     /**
-     * 查询所有答案
+     * 查询所有问题
      *
      * @return
      */
-    @GetMapping("/")
+    @GetMapping("/all")
     public Map<String, Object> allQuestion() {
         HashMap<String, Object> result = new HashMap<>();
         result.put("data", questionService.list());
+        result.put("code", 10001);
         result.put("msg", "success");
         return result;
     }
 
     /**
-     * 保存答案
+     * 保存问题
      * @param question
      * @return
      */
-    @PostMapping("/")
+    @PostMapping("/save")
     public Map<String, Object> saveQuestion(@RequestBody Question question) {
         HashMap<String, Object> result = new HashMap<>();
         questionService.save(question);
         result.put("msg", "success");
+        result.put("code", 10001);
         return result;
     }
 }

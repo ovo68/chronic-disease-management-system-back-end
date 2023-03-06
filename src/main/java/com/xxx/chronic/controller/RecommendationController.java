@@ -32,11 +32,12 @@ public class RecommendationController {
      *
      * @return
      */
-    @GetMapping("/")
+    @GetMapping("/all")
     public Map<String, Object> allRecommendation() {
         HashMap<String, Object> result = new HashMap<>();
         result.put("data", recommendationService.list());
         result.put("msg", "success");
+        result.put("code", 10001);
         return result;
     }
 
@@ -45,11 +46,12 @@ public class RecommendationController {
      * @param recommendation
      * @return
      */
-    @PostMapping("/")
+    @PostMapping("/save")
     public Map<String, Object> saveRecommendation(@RequestBody Recommendation recommendation) {
         HashMap<String, Object> result = new HashMap<>();
         recommendationService.save(recommendation);
         result.put("msg", "success");
+        result.put("code", 10001);
         return result;
     }
 }

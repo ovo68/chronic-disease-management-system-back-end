@@ -8,8 +8,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @since 2023/3/6 9:33
  */
 @SpringBootApplication
-public class ChroniApp {
+public class ChronicApp {
     public static void main(String[] args) {
-        SpringApplication.run(ChroniApp.class, args);
+        SpringApplication.run(ChronicApp.class, args);
     }
 }
