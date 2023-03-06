@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xxx.chronic.mapper.SickMapper">
+  <resultMap id="BaseResultMap" type="com.xxx.chronic.pojo.Sick">
+    <!--@mbg.generated-->
+    <!--@Table sick-->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="age" jdbcType="INTEGER" property="age" />
+    <result column="sex" jdbcType="INTEGER" property="sex" />
+    <result column="is_volunteer" jdbcType="INTEGER" property="isVolunteer" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+    <result column="drug_info" jdbcType="VARCHAR" property="drugInfo" />
+    <result column="doctor_advice" jdbcType="VARCHAR" property="doctorAdvice" />
+    <result column="past_medical" jdbcType="VARCHAR" property="pastMedical" />
+    <result column="exam_info" jdbcType="VARCHAR" property="examInfo" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="role" jdbcType="INTEGER" property="role" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, `name`, age, sex, is_volunteer, phone, address, drug_info, doctor_advice, past_medical, 
+    exam_info, `password`, `role`
+  </sql>
+</mapper>
